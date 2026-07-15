@@ -3,13 +3,15 @@ import Container from "@/components/layout/Container";
 import Link from "next/link";
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default function OpportunityDetails({ params }: Props) {
-  const opportunity = opportunities.find((item) => item.id === params.id);
+export default async function OpportunityDetails({ params }: Props) {
+  const { id } = await params;
+
+  const opportunity = opportunities.find((item) => item.id === id);
 
   if (!opportunity) {
     return (
@@ -47,7 +49,6 @@ export default function OpportunityDetails({ params }: Props) {
 
           <div className="mt-8">
             <h2 className="text-2xl font-semibold">Description</h2>
-
             <p className="mt-3 text-slate-600">{opportunity.description}</p>
           </div>
 
@@ -64,6 +65,7 @@ export default function OpportunityDetails({ params }: Props) {
           <a
             href={opportunity.applyLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 inline-block rounded-lg bg-blue-600 px-6 py-3 text-white"
           >
             Apply Now
