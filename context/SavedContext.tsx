@@ -5,6 +5,7 @@ import { createContext, useContext, useState, ReactNode } from "react";
 type SavedContextType = {
   savedIds: string[];
   saveOpportunity: (id: string) => void;
+  removeOpportunity: (id: string) => void;
 };
 
 const SavedContext = createContext<SavedContextType | undefined>(undefined);
@@ -17,12 +18,15 @@ export function SavedProvider({ children }: { children: ReactNode }) {
 
     setSavedIds([...savedIds, id]);
   }
-
+  function removeOpportunity(id: string) {
+    setSavedIds(savedIds.filter((savedId) => savedId !== id));
+  }
   return (
     <SavedContext.Provider
       value={{
         savedIds,
         saveOpportunity,
+        removeOpportunity,
       }}
     >
       {children}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useSaved } from "@/context/SavedContext";
 
 type OpportunityCardProps = {
   id: string;
@@ -19,6 +20,7 @@ export default function OpportunityCard({
   type,
   deadline,
 }: OpportunityCardProps) {
+  const { saveOpportunity } = useSaved();
   return (
     <div className="rounded-2xl border bg-white p-6 shadow-sm transition hover:shadow-lg">
       <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
@@ -34,7 +36,12 @@ export default function OpportunityCard({
         <p>💼 {type}</p>
         <p>📅 {deadline}</p>
       </div>
-
+      <button
+        onClick={() => saveOpportunity(id)}
+        className="rounded-lg bg-green-600 px-4 py-2 text-white"
+      >
+        Save
+      </button>
       <Link
         href={`/opportunities/${id}`}
         className="mt-6 inline-block rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
