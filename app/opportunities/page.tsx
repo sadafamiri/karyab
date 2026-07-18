@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Container from "@/components/layout/Container";
 import OpportunityCard from "@/components/opportunities/OpportunityCard";
-import { opportunities } from "@/data/opportunities";
+import { useOpportunities } from "@/context/OpportunityContext";
 import SearchBar from "@/components/opportunities/SearchBar";
 import CategoryFilter from "@/components/opportunities/CategoryFilter";
 import LocationFilter from "@/components/opportunities/LocationFilter";
@@ -13,6 +13,7 @@ export default function OpportunitiesPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [location, setLocation] = useState("All");
+  const { opportunities } = useOpportunities();
 
   return (
     <section className="py-20">
