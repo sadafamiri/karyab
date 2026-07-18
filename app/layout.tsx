@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SavedProvider } from "@/context/SavedContext";
+import { OpportunityProvider } from "@/context/OpportunityContext";
 
 export const metadata: Metadata = {
   title: "KaarYab Afghanistan",
@@ -17,11 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SavedProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </SavedProvider>
+        <OpportunityProvider>
+          <SavedProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </SavedProvider>
+        </OpportunityProvider>
       </body>
     </html>
   );

@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 type SavedContextType = {
   savedIds: string[];
@@ -13,14 +19,37 @@ const SavedContext = createContext<SavedContextType | undefined>(undefined);
 export function SavedProvider({ children }: { children: ReactNode }) {
   const [savedIds, setSavedIds] = useState<string[]>([]);
 
-  function saveOpportunity(id: string) {
-    if (savedIds.includes(id)) return;
+  // خواندن اطلاعات از LocalStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("savedOpportunities");
 
-    setSavedIds([...savedIds, id]);
+    if (saved) {
+      setSavedIds(JSON.parse(saved));
+    }
+  }, []);
+
+  function saveOpportunity(id: string) {
+    setSavedIds((prev) => {
+      if (prev.includes(id)) return prev;
+
+      const updated = [...prev, id];
+
+      localStorage.setItem("savedOpportunities", JSON.stringify(updated));
+
+      return updated;
+    });
   }
+
   function removeOpportunity(id: string) {
-    setSavedIds(savedIds.filter((savedId) => savedId !== id));
+    setSavedIds((prev) => {
+      const updated = prev.filter((savedId) => savedId !== id);
+
+      localStorage.setItem("savedOpportunities", JSON.stringify(updated));
+
+      return updated;
+    });
   }
+
   return (
     <SavedContext.Provider
       value={{
