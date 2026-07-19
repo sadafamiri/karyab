@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useSaved } from "@/context/SavedContext";
+import { useOpportunities } from "@/context/OpportunityContext";
 
 type OpportunityCardProps = {
   id: string;
@@ -22,6 +23,7 @@ export default function OpportunityCard({
   deadline,
 }: OpportunityCardProps) {
   const { saveOpportunity } = useSaved();
+  const { deleteOpportunity } = useOpportunities();
   return (
     <div className="rounded-2xl border bg-white p-6 shadow-sm transition hover:shadow-lg">
       <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
@@ -49,6 +51,12 @@ export default function OpportunityCard({
       >
         View Details
       </Link>
+      <button
+        onClick={() => deleteOpportunity(id)}
+        className="ml-3 rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+      >
+        Delete
+      </button>
     </div>
   );
 }

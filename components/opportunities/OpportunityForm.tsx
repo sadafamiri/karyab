@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useOpportunities } from "@/context/OpportunityContext";
 
 type FormData = {
   title: string;
@@ -35,12 +36,28 @@ export default function OpportunityForm() {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
+  const { addOpportunity } = useOpportunities();
 
   function onSubmit(data: FormData) {
-    console.log(data);
+    console.log("Submitting");
+
+    addOpportunity({
+      id: Date.now().toString(),
+      title: data.title,
+      organization: data.organization,
+      category: data.category,
+      location: data.location,
+      type: "Custom",
+      deadline: data.deadline,
+      description: data.description,
+      requirements: data.requirements.split(",").map((item) => item.trim()),
+      applyLink: data.applyLink,
+    });
+
+    alert("Opportunity Added");
+
     reset();
   }
-
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
