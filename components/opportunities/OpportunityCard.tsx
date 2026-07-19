@@ -52,7 +52,16 @@ export default function OpportunityCard({
         View Details
       </Link>
       <button
-        onClick={() => deleteOpportunity(id)}
+        onClick={() => {
+          const confirmDelete = window.confirm(
+            "Are you sure you want to delete this opportunity?",
+          );
+
+          if (confirmDelete) {
+            deleteOpportunity(id);
+            alert("Opportunity deleted successfully.");
+          }
+        }}
         className="ml-3 rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700"
       >
         Delete

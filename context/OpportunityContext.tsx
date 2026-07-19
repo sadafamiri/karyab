@@ -26,6 +26,7 @@ type OpportunityContextType = {
   opportunities: Opportunity[];
   addOpportunity: (opportunity: Opportunity) => void;
   deleteOpportunity: (id: string) => void;
+  updateOpportunity: (opportunity: Opportunity) => void;
 };
 
 const OpportunityContext = createContext<OpportunityContextType | undefined>(
@@ -56,6 +57,13 @@ export function OpportunityProvider({ children }: { children: ReactNode }) {
   function deleteOpportunity(id: string) {
     setOpportunities((prev) => prev.filter((item) => item.id !== id));
   }
+  function updateOpportunity(updatedOpportunity: Opportunity) {
+    setOpportunities((prev) =>
+      prev.map((item) =>
+        item.id === updatedOpportunity.id ? updatedOpportunity : item,
+      ),
+    );
+  }
 
   return (
     <OpportunityContext.Provider
@@ -63,6 +71,7 @@ export function OpportunityProvider({ children }: { children: ReactNode }) {
         opportunities,
         addOpportunity,
         deleteOpportunity,
+        updateOpportunity,
       }}
     >
       {children}
