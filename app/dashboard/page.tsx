@@ -3,6 +3,7 @@
 import Container from "@/components/layout/Container";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import { useOpportunities } from "@/context/OpportunityContext";
+import OpportunityChart from "@/components/dashboard/OpportunityChart";
 
 export default function DashboardPage() {
   const { opportunities } = useOpportunities();
@@ -37,6 +38,12 @@ export default function DashboardPage() {
 
           <DashboardCard title="Remote" value={remote} />
         </div>
+        <OpportunityChart
+          jobs={jobs}
+          internships={internships}
+          scholarships={scholarships}
+          remote={remote}
+        />
       </section>
     </Container>
   );
