@@ -7,6 +7,7 @@ import {
   useEffect,
   ReactNode,
 } from "react";
+
 import { opportunities as initialData } from "@/data/opportunities";
 
 export type Opportunity = {
@@ -34,29 +35,31 @@ const OpportunityContext = createContext<OpportunityContextType | undefined>(
 );
 
 export function OpportunityProvider({ children }: { children: ReactNode }) {
-  const [opportunities, setOpportunities] = useState<Opportunity[]>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("opportunities");
+  const [opportunities, setOpportunities] =
+    useState<Opportunity[]>(initialData);
 
-      if (saved) {
-        return JSON.parse(saved);
-      }
+  // Load from LocalStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("opportunities");
+
+    if (saved) {
+      setOpportunities(JSON.parse(saved));
     }
+  }, []);
 
-    return initialData;
-  });
+  // Save to LocalStorage
   useEffect(() => {
     localStorage.setItem("opportunities", JSON.stringify(opportunities));
   }, [opportunities]);
-  function addOpportunity(opportunity: Opportunity) {
-    console.log("addOpportunity called");
 
+  function addOpportunity(opportunity: Opportunity) {
     setOpportunities((prev) => [...prev, opportunity]);
   }
 
   function deleteOpportunity(id: string) {
     setOpportunities((prev) => prev.filter((item) => item.id !== id));
   }
+
   function updateOpportunity(updatedOpportunity: Opportunity) {
     setOpportunities((prev) =>
       prev.map((item) =>
