@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useOpportunities } from "@/context/OpportunityContext";
+import { Opportunity } from "@/context/OpportunityContext";
+import { useRouter } from "next/navigation";
 
 type FormData = {
   title: string;
@@ -14,6 +16,10 @@ type FormData = {
   description: string;
   requirements: string;
   applyLink: string;
+};
+
+type OpportunityFormProps = {
+  opportunity?: Opportunity;
 };
 
 const schema = z.object({
@@ -27,7 +33,7 @@ const schema = z.object({
   applyLink: z.string().url("Enter a valid URL"),
 });
 
-export default function OpportunityForm() {
+export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
   const {
     register,
     handleSubmit,
@@ -35,28 +41,51 @@ export default function OpportunityForm() {
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(schema),
+
+    defaultValues: opportunity
+      ? {
+          title: opportunity.title,
+          organization: opportunity.organization,
+          category: opportunity.category,
+          location: opportunity.location,
+          deadline: opportunity.deadline,
+          description: opportunity.description,
+          requirements: opportunity.requirements.join(", "),
+          applyLink: opportunity.applyLink,
+        }
+      : undefined,
   });
-  const { addOpportunity } = useOpportunities();
+  const { addOpportunity, updateOpportunity } = useOpportunities();
+
+  const router = useRouter();
 
   function onSubmit(data: FormData) {
-    console.log("Submitting");
-
-    addOpportunity({
-      id: Date.now().toString(),
+    const newOpportunity = {
+      id: opportunity ? opportunity.id : Date.now().toString(),
       title: data.title,
       organization: data.organization,
       category: data.category,
       location: data.location,
-      type: "Custom",
+      type: opportunity ? opportunity.type : "Custom",
       deadline: data.deadline,
       description: data.description,
       requirements: data.requirements.split(",").map((item) => item.trim()),
       applyLink: data.applyLink,
-    });
+    };
 
-    alert("Opportunity Added");
+    if (opportunity) {
+      updateOpportunity(newOpportunity);
 
-    reset();
+      alert("Opportunity Updated Successfully!");
+
+      router.push("/opportunities");
+    } else {
+      addOpportunity(newOpportunity);
+
+      alert("Opportunity Added Successfully!");
+
+      reset();
+    }
   }
   return (
     <form
@@ -203,7 +232,7 @@ export default function OpportunityForm() {
         type="submit"
         className="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
       >
-        Add Opportunity
+        {opportunity ? "Update Opportunity" : "Add Opportunity"}
       </button>
     </form>
   );

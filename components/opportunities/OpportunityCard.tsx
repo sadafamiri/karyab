@@ -39,18 +39,28 @@ export default function OpportunityCard({
         <p>💼 {type}</p>
         <p>📅 {deadline}</p>
       </div>
-      <button
-        onClick={() => saveOpportunity(id)}
-        className="rounded-lg bg-green-600 px-4 py-2 text-white"
-      >
-        Save
-      </button>
-      <Link
-        href={`/opportunities/${id}`}
-        className="mt-6 inline-block rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-      >
-        View Details
-      </Link>
+      <div className="mt-6 flex gap-3">
+        <button
+          onClick={() => saveOpportunity(id)}
+          className="rounded-lg bg-green-600 px-4 py-2 text-white"
+        >
+          Save
+        </button>
+
+        <Link
+          href={`/edit-opportunity/${id}`}
+          className="rounded-lg bg-yellow-500 px-4 py-2 text-white hover:bg-yellow-600"
+        >
+          Edit
+        </Link>
+
+        <Link
+          href={`/opportunities/${id}`}
+          className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+        >
+          Details
+        </Link>
+      </div>
       <button
         onClick={() => {
           const confirmDelete = window.confirm(
