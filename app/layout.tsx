@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SavedProvider } from "@/context/SavedContext";
 import { OpportunityProvider } from "@/context/OpportunityContext";
+import ThemeProvider from "@/context/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "KaarYab Afghanistan",
@@ -16,15 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <OpportunityProvider>
-          <SavedProvider>
-            <Navbar />
-            {children}
-            <Footer />
-          </SavedProvider>
-        </OpportunityProvider>
+        <ThemeProvider>
+          <OpportunityProvider>
+            <SavedProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </SavedProvider>
+          </OpportunityProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -29,12 +29,14 @@ const stats = [
 
 export default function Statistics() {
   return (
-    <section className="bg-slate-50 py-20">
+    <section className="bg-slate-50 py-20 transition-colors duration-300 dark:bg-slate-900">
       <Container>
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">Platform Statistics</h2>
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Platform Statistics
+          </h2>
 
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-slate-600 dark:text-slate-300">
             Discover how many opportunities are available.
           </p>
         </div>
@@ -43,15 +45,17 @@ export default function Statistics() {
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="rounded-2xl bg-white p-8 text-center shadow-sm border hover:shadow-lg transition"
+              className="rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-800"
             >
               <div className="text-5xl">{stat.icon}</div>
 
-              <h3 className="mt-4 text-4xl font-bold text-blue-600">
+              <h3 className="mt-4 text-4xl font-bold text-blue-600 dark:text-blue-400">
                 {stat.value}
               </h3>
 
-              <p className="mt-2 text-slate-600">{stat.title}</p>
+              <p className="mt-2 text-slate-600 dark:text-slate-300">
+                {stat.title}
+              </p>
             </div>
           ))}
         </div>

@@ -3,9 +3,11 @@
 import { useParams } from "next/navigation";
 import { useOpportunities } from "@/context/OpportunityContext";
 import OpportunityForm from "@/components/opportunities/OpportunityForm";
+import Container from "@/components/layout/Container";
 
 export default function EditOpportunityPage() {
-  const { id } = useParams();
+  const params = useParams();
+  const id = params.id as string;
 
   const { opportunities } = useOpportunities();
 
@@ -13,17 +15,23 @@ export default function EditOpportunityPage() {
 
   if (!opportunity) {
     return (
-      <h1 className="py-20 text-center text-3xl font-bold">
-        Opportunity Not Found
-      </h1>
+      <Container>
+        <h1 className="py-20 text-center text-3xl font-bold text-gray-900 dark:text-white">
+          Opportunity Not Found
+        </h1>
+      </Container>
     );
   }
 
   return (
-    <div className="mx-auto max-w-3xl py-20">
-      <h1 className="mb-8 text-4xl font-bold">Edit Opportunity</h1>
+    <Container>
+      <section className="py-20">
+        <h1 className="mb-8 text-4xl font-bold text-gray-900 dark:text-white">
+          Edit Opportunity
+        </h1>
 
-      <OpportunityForm opportunity={opportunity} />
-    </div>
+        <OpportunityForm opportunity={opportunity} />
+      </section>
+    </Container>
   );
 }
