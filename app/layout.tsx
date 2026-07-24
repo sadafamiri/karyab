@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { SavedProvider } from "@/context/SavedContext";
 import { OpportunityProvider } from "@/context/OpportunityContext";
 import ThemeProvider from "@/context/ThemeProvider";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata: Metadata = {
   title: "KaarYab Afghanistan",
@@ -20,13 +21,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body>
         <ThemeProvider>
-          <OpportunityProvider>
-            <SavedProvider>
-              <Navbar />
-              {children}
-              <Footer />
-            </SavedProvider>
-          </OpportunityProvider>
+          <AuthProvider>
+            <OpportunityProvider>
+              <SavedProvider>
+                <Navbar />
+                {children}
+                <Footer />
+              </SavedProvider>
+            </OpportunityProvider>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
