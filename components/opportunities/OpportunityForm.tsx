@@ -90,16 +90,18 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-6 rounded-2xl border bg-white p-8 shadow"
+      className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow transition-colors duration-300 dark:border-slate-700 dark:bg-slate-800"
     >
       {/* Title */}
       <div>
-        <label className="mb-2 block font-semibold">Title</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Title
+        </label>
 
         <input
           {...register("title")}
-          className="w-full rounded-lg border p-3"
-          placeholder="Frontend Developer"
+          placeholder="Title"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
         />
 
         {errors.title && (
@@ -109,11 +111,13 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Organization */}
       <div>
-        <label className="mb-2 block font-semibold">Organization</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Organization
+        </label>
 
         <input
           {...register("organization")}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
           placeholder="Google"
         />
 
@@ -126,11 +130,13 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Category */}
       <div>
-        <label className="mb-2 block font-semibold">Category</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Category
+        </label>
 
         <select
           {...register("category")}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         >
           <option value="">Select Category</option>
           <option value="Job">Job</option>
@@ -147,11 +153,13 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Location */}
       <div>
-        <label className="mb-2 block font-semibold">Location</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Location
+        </label>
 
         <input
           {...register("location")}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
           placeholder="Herat"
         />
 
@@ -162,12 +170,14 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Deadline */}
       <div>
-        <label className="mb-2 block font-semibold">Deadline</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Deadline
+        </label>
 
         <input
           type="date"
           {...register("deadline")}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
         />
 
         {errors.deadline && (
@@ -177,13 +187,14 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Description */}
       <div>
-        <label className="mb-2 block font-semibold">Description</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Description
+        </label>
 
         <textarea
           {...register("description")}
           rows={5}
-          className="w-full rounded-lg border p-3"
-          placeholder="Write opportunity description..."
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.description && (
@@ -195,12 +206,14 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Requirements */}
       <div>
-        <label className="mb-2 block font-semibold">Requirements</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Requirements
+        </label>
 
         <textarea
           {...register("requirements")}
           rows={4}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
           placeholder="React, HTML, CSS..."
         />
 
@@ -213,11 +226,13 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
 
       {/* Apply Link */}
       <div>
-        <label className="mb-2 block font-semibold">Apply Link</label>
+        <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
+          Apply Link
+        </label>
 
         <input
           {...register("applyLink")}
-          className="w-full rounded-lg border p-3"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
           placeholder="https://example.com"
         />
 

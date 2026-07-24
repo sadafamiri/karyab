@@ -3,9 +3,9 @@ import OpportunityForm from "@/components/opportunities/OpportunityForm";
 
 export default function AddOpportunityPage() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-slate-900 transition-colors">
+    <section className="bg-slate-50 py-20 transition-colors duration-300 dark:bg-slate-950">
       <Container>
-        <h1 className="mb-8 text-4xl font-bold text-gray-900 dark:text-white">
+        <h1 className="mb-8 text-4xl font-bold text-slate-900 dark:text-white">
           Add Opportunity
         </h1>
 

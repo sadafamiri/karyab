@@ -25,8 +25,8 @@ export default function EditOpportunityPage() {
 
   return (
     <Container>
-      <section className="py-20">
-        <h1 className="mb-8 text-4xl font-bold text-gray-900 dark:text-white">
+      <section className="py-20 transition-colors duration-300">
+        <h1 className="mb-8 text-4xl font-bold text-slate-900 dark:text-white">
           Edit Opportunity
         </h1>
 
