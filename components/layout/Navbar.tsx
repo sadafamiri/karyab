@@ -1,3 +1,4 @@
+ //  درست شد 
 import Link from "next/link";
 import Logo from "./Logo";
 import Navigation from "./Navigation";

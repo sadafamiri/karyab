@@ -1,4 +1,5 @@
-import Link from "next/link";
+    //  درست شد 
+    import Link from "next/link";
 import Container from "../layout/Container";
 
 export default function Hero() {

@@ -23,32 +23,26 @@ export default function DashboardPage() {
   const remote = opportunities.filter((item) => item.type === "Remote").length;
 
   return (
-    <section className="min-h-screen bg-slate-50 py-20 transition-colors duration-300 dark:bg-slate-950">
+    <section className="min-h-screen bg-slate-50 py-20 transition-colors dark:bg-slate-950">
       <Container>
-        <h1 className="mb-10 text-4xl font-bold text-slate-900 dark:text-white">
+        <h1 className="mb-10 text-5xl font-bold text-slate-900 dark:text-white">
           Dashboard
         </h1>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           <DashboardCard title="Total Opportunities" value={total} />
-
           <DashboardCard title="Jobs" value={jobs} />
-
           <DashboardCard title="Internships" value={internships} />
-
           <DashboardCard title="Scholarships" value={scholarships} />
-
           <DashboardCard title="Remote" value={remote} />
         </div>
 
-        <div className="mt-12">
-          <OpportunityChart
-            jobs={jobs}
-            internships={internships}
-            scholarships={scholarships}
-            remote={remote}
-          />
-        </div>
+        <OpportunityChart
+          jobs={jobs}
+          internships={internships}
+          scholarships={scholarships}
+          remote={remote}
+        />
       </Container>
     </section>
   );
