@@ -19,7 +19,6 @@ const SavedContext = createContext<SavedContextType | undefined>(undefined);
 export function SavedProvider({ children }: { children: ReactNode }) {
   const [savedIds, setSavedIds] = useState<string[]>([]);
 
-  // خواندن اطلاعات از LocalStorage
   useEffect(() => {
     const saved = localStorage.getItem("savedOpportunities");
 

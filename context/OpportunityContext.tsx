@@ -38,12 +38,19 @@ export function OpportunityProvider({ children }: { children: ReactNode }) {
   const [opportunities, setOpportunities] =
     useState<Opportunity[]>(initialData);
 
-  // Load from LocalStorage
   useEffect(() => {
     const saved = localStorage.getItem("opportunities");
 
     if (saved) {
-      setOpportunities(JSON.parse(saved));
+      const parsed = JSON.parse(saved);
+
+      if (parsed.length < initialData.length) {
+        setOpportunities(initialData);
+      } else {
+        setOpportunities(parsed);
+      }
+    } else {
+      setOpportunities(initialData);
     }
   }, []);
 
