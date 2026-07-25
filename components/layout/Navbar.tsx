@@ -33,9 +33,12 @@ export default function Navbar() {
                   Add Opportunity
                 </Link>
 
-                <span className="font-medium text-slate-700 dark:text-white">
+                <Link
+                  href="/profile"
+                  className="font-medium text-slate-700 hover:text-blue-600 dark:text-white"
+                >
                   Hi, {user.name}
-                </span>
+                </Link>
 
                 <button
                   onClick={logout}
