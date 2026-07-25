@@ -1,0 +1,10 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "opportunities": "Opportunities",
+    "about": "About",
+    "contact": "Contact",
+    "signin": "Sign In",
+    "signup": "Sign Up"
+  }
+}

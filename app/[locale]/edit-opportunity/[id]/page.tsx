@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useOpportunities } from "@/context/OpportunityContext";
 import OpportunityForm from "@/components/opportunities/OpportunityForm";
 import Container from "@/components/layout/Container";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 export default function EditOpportunityPage() {
   const params = useParams();
@@ -24,14 +25,16 @@ export default function EditOpportunityPage() {
   }
 
   return (
-    <Container>
-      <section className="py-20 transition-colors duration-300">
-        <h1 className="mb-8 text-4xl font-bold text-slate-900 dark:text-white">
-          Edit Opportunity
-        </h1>
+    <ProtectedRoute>
+      <Container>
+        <section className="py-20 transition-colors duration-300">
+          <h1 className="mb-8 text-4xl font-bold text-slate-900 dark:text-white">
+            Edit Opportunity
+          </h1>
 
-        <OpportunityForm opportunity={opportunity} />
-      </section>
-    </Container>
+          <OpportunityForm opportunity={opportunity} />
+        </section>
+      </Container>
+    </ProtectedRoute>
   );
 }
