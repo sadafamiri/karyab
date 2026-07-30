@@ -5,10 +5,14 @@ import Logo from "./Logo";
 import Navigation from "./Navigation";
 import Container from "./Container";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { useAuth } from "@/context/AuthContext";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
+
+  const t = useTranslations("Navbar");
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-slate-50 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900">
@@ -22,45 +26,55 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-3">
-            <ThemeToggle />
+            {/* Language */}
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
+
+            {/* Theme */}
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
 
             {user ? (
               <>
-                <Link
-                  href="/add-opportunity"
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
-                >
-                  Add Opportunity
-                </Link>
+                <div className="hidden md:block">
+                  <Link
+                    href="/add-opportunity"
+                    className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+                  >
+                    {t("addOpportunity")}
+                  </Link>
+                </div>
 
                 <Link
                   href="/profile"
-                  className="font-medium text-slate-700 hover:text-blue-600 dark:text-white"
+                  className="hidden md:block font-medium text-slate-700 hover:text-blue-600 dark:text-white"
                 >
-                  Hi, {user.name}
+                  {t("hello")}, {user.name}
                 </Link>
 
                 <button
                   onClick={logout}
-                  className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700"
+                  className="hidden md:block rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700"
                 >
-                  Logout
+                  {t("logout")}
                 </button>
               </>
             ) : (
               <>
                 <Link
                   href="/signin"
-                  className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800"
+                  className="hidden md:block rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800"
                 >
-                  Sign In
+                  {t("signin")}
                 </Link>
 
                 <Link
                   href="/signup"
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+                  className="hidden md:block rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
                 >
-                  Sign Up
+                  {t("signup")}
                 </Link>
               </>
             )}

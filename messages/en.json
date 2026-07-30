@@ -5,6 +5,9 @@
     "about": "About",
     "contact": "Contact",
     "signin": "Sign In",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "addOpportunity": "Add Opportunity",
+    "logout": "Logout",
+    "hello": "Hi"
   }
 }

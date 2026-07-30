@@ -5,6 +5,9 @@
     "about": "زموږ په اړه",
     "contact": "اړیکه",
     "signin": "ننوتل",
-    "signup": "راجستر"
+    "signup": "نوم لیکنه",
+    "addOpportunity": "فرصت اضافه کول",
+    "logout": "وتل",
+    "hello": "سلام"
   }
 }
