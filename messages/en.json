@@ -9,5 +9,60 @@
     "addOpportunity": "Add Opportunity",
     "logout": "Logout",
     "hello": "Hi"
+  },
+
+  "About": {
+    "title": "About KaarYab Afghanistan",
+    "p1": "KaarYab Afghanistan is an opportunity finder platform designed to help Afghan youth discover jobs, internships, scholarships, training programs, remote work, and online learning opportunities.",
+    "p2": "Many opportunities are scattered across different websites and social media platforms. KaarYab brings them together in one place, making it easier for students, graduates, and job seekers to find suitable opportunities.",
+    "p3": "Users can browse opportunities, search and filter results, save opportunities, and even submit new opportunities through the platform.",
+    "p4": "This project was built using Next.js, React, Tailwind CSS, React Hook Form, Zod Validation, Context API, and LocalStorage as a final capstone project."
+  },
+
+  "AddOpportunity": {
+    "title": "Add Opportunity"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "description": "Have a question, suggestion, or opportunity to share? We'd love to hear from you.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject",
+    "message": "Message",
+    "messagePlaceholder": "Write your message...",
+    "send": "Send Message"
+  },
+
+  "Dashboard": {
+    "title": "Dashboard",
+    "total": "Total Opportunities",
+    "jobs": "Jobs",
+    "internships": "Internships",
+    "scholarships": "Scholarships",
+    "remote": "Remote"
+  },
+
+  "Opportunities": {
+    "title": "Opportunities",
+    "all": "All"
+  },
+  "CategoryFilter": {
+    "all": "All",
+    "job": "Job",
+    "internship": "Internship",
+    "scholarship": "Scholarship",
+    "onlineCourse": "Online Course"
+  },
+  "LocationFilter": {
+    "all": "All",
+    "kabul": "Kabul",
+    "herat": "Herat",
+    "online": "Online"
+  },
+  "SearchBar": {
+    "placeholder": "Search opportunities..."
   }
 }

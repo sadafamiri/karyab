@@ -5,7 +5,11 @@ import DashboardCard from "@/components/dashboard/DashboardCard";
 import OpportunityChart from "@/components/dashboard/OpportunityChart";
 import { useOpportunities } from "@/context/OpportunityContext";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import { useTranslations } from "next-intl";
+
 export default function DashboardPage() {
+  const t = useTranslations("Dashboard");
+
   const { opportunities } = useOpportunities();
 
   const total = opportunities.length;
@@ -27,15 +31,19 @@ export default function DashboardPage() {
       <section className="min-h-screen bg-slate-50 py-20 transition-colors dark:bg-slate-950">
         <Container>
           <h1 className="mb-10 text-5xl font-bold text-slate-900 dark:text-white">
-            Dashboard
+            {t("title")}
           </h1>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            <DashboardCard title="Total Opportunities" value={total} />
-            <DashboardCard title="Jobs" value={jobs} />
-            <DashboardCard title="Internships" value={internships} />
-            <DashboardCard title="Scholarships" value={scholarships} />
-            <DashboardCard title="Remote" value={remote} />
+            <DashboardCard title={t("total")} value={total} />
+
+            <DashboardCard title={t("jobs")} value={jobs} />
+
+            <DashboardCard title={t("internships")} value={internships} />
+
+            <DashboardCard title={t("scholarships")} value={scholarships} />
+
+            <DashboardCard title={t("remote")} value={remote} />
           </div>
 
           <OpportunityChart
