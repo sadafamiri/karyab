@@ -65,5 +65,45 @@
   },
   "SearchBar": {
     "placeholder": "د فرصتونو لټون..."
+  },
+  "OpportunityForm": {
+    "title": "سرلیک",
+    "organization": "اداره",
+    "category": "کټګوري",
+    "location": "ځای",
+    "deadline": "وروستۍ نېټه",
+    "description": "تشریح",
+    "requirements": "شرایط",
+    "applyLink": "د غوښتنلیک لینک",
+
+    "titlePlaceholder": "لکه Frontend Developer",
+    "organizationPlaceholder": "Google",
+    "locationPlaceholder": "هرات",
+    "requirementsPlaceholder": "React، HTML، CSS...",
+
+    "selectCategory": "کټګوري انتخاب کړئ",
+
+    "job": "دنده",
+    "internship": "انټرنشیپ",
+    "scholarship": "بورسیه",
+    "training": "روزنه",
+    "volunteer": "رضاکاري",
+
+    "add": "فرصت اضافه کړئ",
+    "update": "فرصت بدل کړئ",
+
+    "addedSuccess": "فرصت په بریالیتوب اضافه شو!",
+    "updatedSuccess": "فرصت په بریالیتوب تازه شو!",
+
+    "errors": {
+      "title": "سرلیک باید لږ تر لږه ۳ توري ولري",
+      "organization": "د ادارې نوم ضروري دی",
+      "category": "کټګوري انتخاب کړئ",
+      "location": "ځای ضروري دی",
+      "deadline": "وروستۍ نېټه ضروري ده",
+      "description": "تشریح ډېره لنډه ده",
+      "requirements": "شرایط ضروري دي",
+      "url": "سم لینک داخل کړئ"
+    }
   }
 }

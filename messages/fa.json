@@ -64,5 +64,45 @@
   },
   "SearchBar": {
     "placeholder": "جستجوی فرصت‌ها..."
+  },
+  "OpportunityForm": {
+    "title": "عنوان",
+    "organization": "سازمان",
+    "category": "دسته‌بندی",
+    "location": "موقعیت",
+    "deadline": "آخرین مهلت",
+    "description": "توضیحات",
+    "requirements": "شرایط لازم",
+    "applyLink": "لینک درخواست",
+
+    "titlePlaceholder": "مثلاً توسعه‌دهنده فرانت‌اند",
+    "organizationPlaceholder": "گوگل",
+    "locationPlaceholder": "هرات",
+    "requirementsPlaceholder": "React، HTML، CSS...",
+
+    "selectCategory": "انتخاب دسته‌بندی",
+
+    "job": "وظیفه",
+    "internship": "کارآموزی",
+    "scholarship": "بورسیه",
+    "training": "آموزش",
+    "volunteer": "داوطلبی",
+
+    "add": "افزودن فرصت",
+    "update": "ویرایش فرصت",
+
+    "addedSuccess": "فرصت با موفقیت اضافه شد!",
+    "updatedSuccess": "فرصت با موفقیت به‌روزرسانی شد!",
+
+    "errors": {
+      "title": "عنوان باید حداقل ۳ حرف داشته باشد",
+      "organization": "نام سازمان ضروری است",
+      "category": "یک دسته‌بندی انتخاب کنید",
+      "location": "موقعیت ضروری است",
+      "deadline": "تاریخ ختم ضروری است",
+      "description": "توضیحات کوتاه است",
+      "requirements": "شرایط لازم ضروری است",
+      "url": "لینک معتبر وارد کنید"
+    }
   }
 }

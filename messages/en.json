@@ -64,5 +64,47 @@
   },
   "SearchBar": {
     "placeholder": "Search opportunities..."
+  },
+  {
+  "OpportunityForm": {
+    "title": "Title",
+    "organization": "Organization",
+    "category": "Category",
+    "location": "Location",
+    "deadline": "Deadline",
+    "description": "Description",
+    "requirements": "Requirements",
+    "applyLink": "Apply Link",
+
+    "titlePlaceholder": "Frontend Developer",
+    "organizationPlaceholder": "Google",
+    "locationPlaceholder": "Herat",
+    "requirementsPlaceholder": "React, HTML, CSS...",
+
+    "selectCategory": "Select Category",
+
+    "job": "Job",
+    "internship": "Internship",
+    "scholarship": "Scholarship",
+    "training": "Training",
+    "volunteer": "Volunteer",
+
+    "add": "Add Opportunity",
+    "update": "Update Opportunity",
+
+    "addedSuccess": "Opportunity Added Successfully!",
+    "updatedSuccess": "Opportunity Updated Successfully!",
+
+    "errors": {
+      "title": "Title must be at least 3 characters",
+      "organization": "Organization is required",
+      "category": "Select a category",
+      "location": "Location is required",
+      "deadline": "Deadline is required",
+      "description": "Description is too short",
+      "requirements": "Requirements are required",
+      "url": "Enter a valid URL"
+    }
   }
+}
 }
