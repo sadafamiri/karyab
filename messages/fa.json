@@ -1,0 +1,13 @@
+{
+  "Navbar": {
+    "home": "خانه",
+    "opportunities": "فرصت‌ها",
+    "about": "درباره ما",
+    "contact": "تماس با ما",
+    "signin": "ورود",
+    "signup": "ثبت نام",
+    "addOpportunity": "افزودن فرصت",
+    "logout": "خروج",
+    "hello": "سلام"
+  }
+}
