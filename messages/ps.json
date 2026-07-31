@@ -105,5 +105,51 @@
       "requirements": "شرایط ضروري دي",
       "url": "سم لینک داخل کړئ"
     }
+  },
+  "Profile": {
+    "notLoggedIn": "تاسو ننوتي نه یاست",
+    "loginMessage": "مهرباني وکړئ خپل پروفایل لیدلو لپاره ننوځئ.",
+    "name": "نوم",
+    "email": "ایمیل",
+    "logout": "وتل"
+  },
+  "Saved": {
+    "title": "ساتل شوي فرصتونه",
+    "savedCount": "تاسو {count} فرصتونه ساتلي دي.",
+    "empty": "تر اوسه مو هېڅ فرصت نه دی ساتلی."
+  },
+  "SignIn": {
+    "title": "بیا بیا ښه راغلاست",
+    "email": "ایمیل",
+    "password": "پټ نوم",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "ننوتل",
+    "noAccount": "حساب نه لرئ؟",
+    "signup": "نوم لیکنه",
+    "fillFields": "مهرباني وکړئ ټول ځایونه ډک کړئ.",
+    "success": "ننوتل بریالي شول!",
+    "invalid": "ایمیل یا پټ نوم ناسم دی."
+  },
+  "SignUp": {
+    "title": "حساب جوړ کړئ",
+    "name": "بشپړ نوم",
+    "email": "ایمیل",
+    "password": "پټ نوم",
+    "namePlaceholder": "صدف امیري",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "نوم لیکنه",
+    "haveAccount": "له مخکې حساب لرئ؟",
+    "signin": "ننوتل",
+    "fillFields": "مهرباني وکړئ ټول ځایونه ډک کړئ.",
+    "success": "حساب په بریالیتوب جوړ شو!"
+  },
+  "Hero": {
+    "badge": "د افغان ځوانانو پیاوړتیا",
+    "title": "خپل راتلونکی فرصت پیدا کړئ",
+    "description": "په یوه ځای کې د افغانستان دندې، انټرنشیپونه، بورسونه، آنلاین کارونه او د زده کړې فرصتونه ومومئ.",
+    "explore": "فرصتونه وګورئ",
+    "add": "فرصت اضافه کړئ"
   }
 }

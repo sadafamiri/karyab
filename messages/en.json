@@ -65,7 +65,6 @@
   "SearchBar": {
     "placeholder": "Search opportunities..."
   },
-  {
   "OpportunityForm": {
     "title": "Title",
     "organization": "Organization",
@@ -105,6 +104,52 @@
       "requirements": "Requirements are required",
       "url": "Enter a valid URL"
     }
+  },
+
+  "Profile": {
+    "notLoggedIn": "You are not logged in",
+    "loginMessage": "Please sign in to view your profile.",
+    "name": "Name",
+    "email": "Email",
+    "logout": "Logout"
+  },
+  "Saved": {
+    "title": "Saved Opportunities",
+    "savedCount": "You have saved {count} opportunities.",
+    "empty": "You have no saved opportunities yet."
+  },
+  "SignIn": {
+    "title": "Welcome Back",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "Sign In",
+    "noAccount": "Don't have an account?",
+    "signup": "Sign Up",
+    "fillFields": "Please fill all fields.",
+    "success": "Login Successful!",
+    "invalid": "Invalid Email or Password"
+  },
+  "SignUp": {
+    "title": "Create Account",
+    "name": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "namePlaceholder": "Sadaf Amiri",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "signin": "Sign In",
+    "fillFields": "Please fill all fields.",
+    "success": "Account created successfully!"
+  },
+  "Hero": {
+    "badge": "Empowering Afghan Youth",
+    "title": "Discover Your Next Opportunity",
+    "description": "Find jobs, internships, scholarships, remote work, and learning opportunities across Afghanistan in one place.",
+    "explore": "Explore Opportunities",
+    "add": "Add Opportunity"
   }
-}
 }

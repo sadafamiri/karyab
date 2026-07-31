@@ -3,20 +3,22 @@
 import Container from "@/components/layout/Container";
 import { useAuth } from "@/context/AuthContext";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import { useTranslations } from "next-intl";
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
+  const t = useTranslations("Profile");
 
   if (!user) {
     return (
       <Container>
         <section className="py-20 text-center">
           <h1 className="text-4xl font-bold text-slate-900 dark:text-white">
-            You are not logged in
+            {t("notLoggedIn")}
           </h1>
 
           <p className="mt-4 text-slate-600 dark:text-slate-400">
-            Please sign in to view your profile.
+            {t("loginMessage")}
           </p>
         </section>
       </Container>
@@ -44,12 +46,14 @@ export default function ProfilePage() {
 
             <div className="mt-10 space-y-4">
               <div className="flex justify-between rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
-                <span className="font-medium">Name</span>
+                <span className="font-medium">{t("name")}</span>
+
                 <span>{user.name}</span>
               </div>
 
               <div className="flex justify-between rounded-xl bg-slate-100 p-4 dark:bg-slate-800">
-                <span className="font-medium">Email</span>
+                <span className="font-medium">{t("email")}</span>
+
                 <span>{user.email}</span>
               </div>
             </div>
@@ -58,7 +62,7 @@ export default function ProfilePage() {
               onClick={logout}
               className="mt-10 w-full rounded-xl bg-red-600 py-3 font-semibold text-white transition hover:bg-red-700"
             >
-              Logout
+              {t("logout")}
             </button>
           </div>
         </section>

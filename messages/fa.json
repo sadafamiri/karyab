@@ -104,5 +104,51 @@
       "requirements": "شرایط لازم ضروری است",
       "url": "لینک معتبر وارد کنید"
     }
+  },
+  "Profile": {
+    "notLoggedIn": "شما وارد نشده‌اید",
+    "loginMessage": "لطفاً برای دیدن پروفایل خود وارد شوید.",
+    "name": "نام",
+    "email": "ایمیل",
+    "logout": "خروج"
+  },
+  "Saved": {
+    "title": "فرصت‌های ذخیره‌شده",
+    "savedCount": "شما {count} فرصت را ذخیره کرده‌اید.",
+    "empty": "هنوز هیچ فرصتی ذخیره نکرده‌اید."
+  },
+  "SignIn": {
+    "title": "خوش آمدید",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "ورود",
+    "noAccount": "حساب ندارید؟",
+    "signup": "ثبت نام",
+    "fillFields": "لطفاً همه فیلدها را پر کنید.",
+    "success": "ورود موفقیت‌آمیز بود!",
+    "invalid": "ایمیل یا رمز عبور اشتباه است."
+  },
+  "SignUp": {
+    "title": "ایجاد حساب",
+    "name": "نام کامل",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "namePlaceholder": "صدف امیری",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+    "button": "ثبت نام",
+    "haveAccount": "قبلاً حساب دارید؟",
+    "signin": "ورود",
+    "fillFields": "لطفاً همه فیلدها را پر کنید.",
+    "success": "حساب با موفقیت ساخته شد!"
+  },
+  "Hero": {
+    "badge": "توانمندسازی جوانان افغانستان",
+    "title": "فرصت بعدی خود را پیدا کنید",
+    "description": "در یک مکان، شغل‌ها، کارآموزی‌ها، بورسیه‌ها، کارهای آنلاین و فرصت‌های آموزشی افغانستان را پیدا کنید.",
+    "explore": "مشاهده فرصت‌ها",
+    "add": "افزودن فرصت"
   }
 }
