@@ -1,4 +1,4 @@
- //  درست شد 
+//  درست شد
 "use client";
 
 import Link from "next/link";

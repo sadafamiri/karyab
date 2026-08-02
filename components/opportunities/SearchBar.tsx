@@ -1,4 +1,4 @@
- //  درست شد 
+//  درست شد
 type SearchBarProps = {
   search: string;
   setSearch: (value: string) => void;

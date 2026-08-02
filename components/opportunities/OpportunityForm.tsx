@@ -6,6 +6,7 @@ import { z } from "zod";
 import { useOpportunities } from "@/context/OpportunityContext";
 import { Opportunity } from "@/context/OpportunityContext";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 type FormData = {
   title: string;
@@ -22,18 +23,20 @@ type OpportunityFormProps = {
   opportunity?: Opportunity;
 };
 
-const schema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  organization: z.string().min(3, "Organization is required"),
-  category: z.string().min(1, "Select a category"),
-  location: z.string().min(2, "Location is required"),
-  deadline: z.string().min(1, "Deadline is required"),
-  description: z.string().min(10, "Description is too short"),
-  requirements: z.string().min(5, "Requirements are required"),
-  applyLink: z.string().url("Enter a valid URL"),
-});
-
 export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
+  const t = useTranslations("OpportunityForm");
+
+  const schema = z.object({
+    title: z.string().min(3, t("errors.title")),
+    organization: z.string().min(3, t("errors.organization")),
+    category: z.string().min(1, t("errors.category")),
+    location: z.string().min(2, t("errors.location")),
+    deadline: z.string().min(1, t("errors.deadline")),
+    description: z.string().min(10, t("errors.description")),
+    requirements: z.string().min(5, t("errors.requirements")),
+    applyLink: z.string().url(t("errors.url")),
+  });
+
   const {
     register,
     handleSubmit,
@@ -55,6 +58,7 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
         }
       : undefined,
   });
+
   const { addOpportunity, updateOpportunity } = useOpportunities();
 
   const router = useRouter();
@@ -76,49 +80,50 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
     if (opportunity) {
       updateOpportunity(newOpportunity);
 
-      alert("Opportunity Updated Successfully!");
+      alert(t("updatedSuccess"));
 
       router.push("/opportunities");
     } else {
       addOpportunity(newOpportunity);
 
-      alert("Opportunity Added Successfully!");
+      alert(t("addedSuccess"));
 
       reset();
     }
   }
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow transition-colors duration-300 dark:border-slate-700 dark:bg-slate-800"
     >
+      {" "}
       {/* Title */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Title
+          {t("title")}
         </label>
 
         <input
           {...register("title")}
-          placeholder="Title"
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
+          placeholder={t("titlePlaceholder")}
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.title && (
           <p className="mt-1 text-sm text-red-600">{errors.title.message}</p>
         )}
       </div>
-
       {/* Organization */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Organization
+          {t("organization")}
         </label>
 
         <input
           {...register("organization")}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
-          placeholder="Google"
+          placeholder={t("organizationPlaceholder")}
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.organization && (
@@ -127,74 +132,75 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-
       {/* Category */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Category
+          {t("category")}
         </label>
 
         <select
           {...register("category")}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         >
-          <option value="">Select Category</option>
-          <option value="Job">Job</option>
-          <option value="Internship">Internship</option>
-          <option value="Scholarship">Scholarship</option>
-          <option value="Training">Training</option>
-          <option value="Volunteer">Volunteer</option>
+          <option value="">{t("selectCategory")}</option>
+
+          <option value="Job">{t("job")}</option>
+
+          <option value="Internship">{t("internship")}</option>
+
+          <option value="Scholarship">{t("scholarship")}</option>
+
+          <option value="Training">{t("training")}</option>
+
+          <option value="Volunteer">{t("volunteer")}</option>
         </select>
 
         {errors.category && (
           <p className="mt-1 text-sm text-red-600">{errors.category.message}</p>
         )}
       </div>
-
       {/* Location */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Location
+          {t("location")}
         </label>
 
         <input
           {...register("location")}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
-          placeholder="Herat"
+          placeholder={t("locationPlaceholder")}
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.location && (
           <p className="mt-1 text-sm text-red-600">{errors.location.message}</p>
         )}
       </div>
-
       {/* Deadline */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Deadline
+          {t("deadline")}
         </label>
 
         <input
           type="date"
           {...register("deadline")}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.deadline && (
           <p className="mt-1 text-sm text-red-600">{errors.deadline.message}</p>
         )}
       </div>
-
       {/* Description */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Description
+          {t("description")}
         </label>
 
         <textarea
           {...register("description")}
           rows={5}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.description && (
@@ -203,18 +209,17 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-
       {/* Requirements */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Requirements
+          {t("requirements")}
         </label>
 
         <textarea
           {...register("requirements")}
           rows={4}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
-          placeholder="React, HTML, CSS..."
+          placeholder={t("requirementsPlaceholder")}
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.requirements && (
@@ -223,17 +228,16 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-
       {/* Apply Link */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
-          Apply Link
+          {t("applyLink")}
         </label>
 
         <input
           {...register("applyLink")}
-          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 transition-colors duration-300 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500"
           placeholder="https://example.com"
+          className="w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
         />
 
         {errors.applyLink && (
@@ -242,12 +246,12 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-
+      {/* Submit Button */}
       <button
         type="submit"
         className="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
       >
-        {opportunity ? "Update Opportunity" : "Add Opportunity"}
+        {opportunity ? t("update") : t("add")}
       </button>
     </form>
   );
