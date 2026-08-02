@@ -1,44 +1,48 @@
- //  درست شد 
-import Container from "../layout/Container";
+"use client";
 
-const stats = [
-  {
-    id: 1,
-    title: "Jobs",
-    value: "250+",
-    icon: "💼",
-  },
-  {
-    id: 2,
-    title: "Scholarships",
-    value: "120+",
-    icon: "🎓",
-  },
-  {
-    id: 3,
-    title: "Internships",
-    value: "85+",
-    icon: "👨‍💻",
-  },
-  {
-    id: 4,
-    title: "Remote Opportunities",
-    value: "300+",
-    icon: "🌍",
-  },
-];
+import Container from "../layout/Container";
+import { useTranslations } from "next-intl";
 
 export default function Statistics() {
+  const t = useTranslations("Statistics");
+
+  const stats = [
+    {
+      id: 1,
+      title: t("jobs"),
+      value: "250+",
+      icon: "💼",
+    },
+    {
+      id: 2,
+      title: t("scholarships"),
+      value: "120+",
+      icon: "🎓",
+    },
+    {
+      id: 3,
+      title: t("internships"),
+      value: "85+",
+      icon: "👨‍💻",
+    },
+    {
+      id: 4,
+      title: t("remote"),
+      value: "300+",
+      icon: "🌍",
+    },
+  ];
+
   return (
     <section className="bg-slate-50 py-20 transition-colors duration-300 dark:bg-slate-900">
       <Container>
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white">
-            Platform Statistics
+            {t("title")}
           </h2>
 
           <p className="mt-3 text-slate-600 dark:text-slate-300">
-            Discover how many opportunities are available.
+            {t("description")}
           </p>
         </div>
 

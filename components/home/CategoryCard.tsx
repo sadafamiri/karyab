@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type Props = {
   icon: string;
   title: string;
@@ -5,6 +9,8 @@ type Props = {
 };
 
 export default function CategoryCard({ icon, title, total }: Props) {
+  const t = useTranslations("CategoryCard");
+
   return (
     <div
       className="
@@ -18,7 +24,6 @@ export default function CategoryCard({ icon, title, total }: Props) {
         duration-300
         hover:-translate-y-1
         hover:shadow-xl
-
         dark:border-slate-700
         dark:bg-slate-900
       "
@@ -30,7 +35,7 @@ export default function CategoryCard({ icon, title, total }: Props) {
       </h3>
 
       <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
-        {total}+ Opportunities
+        {total}+ {t("opportunities")}
       </p>
     </div>
   );

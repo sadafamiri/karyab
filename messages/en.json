@@ -151,5 +151,16 @@
     "description": "Find jobs, internships, scholarships, remote work, and learning opportunities across Afghanistan in one place.",
     "explore": "Explore Opportunities",
     "add": "Add Opportunity"
+  },
+  "Statistics": {
+    "title": "Platform Statistics",
+    "description": "Discover how many opportunities are available.",
+    "jobs": "Jobs",
+    "scholarships": "Scholarships",
+    "internships": "Internships",
+    "remote": "Remote Opportunities"
+  },
+  "CategoryCard": {
+    "opportunities": "Opportunities"
   }
 }
