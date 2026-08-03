@@ -182,5 +182,50 @@
     "remote": "لرې کار",
     "courses": "روزنیز کورسونه",
     "volunteer": "رضاکارانه"
+  },
+  "Featured": {
+    "title": "ځانګړي فرصتونه",
+    "description": "ستاسو لپاره ټاکل شوي وروستي فرصتونه وګورئ."
+  },
+  "OpportunityData": {
+    "frontendIntern": "د Frontend پراختیا کوونکي انټرن",
+    "womenScholarship": "د ښځو لپاره د ټکنالوژۍ بورس",
+    "juniorDesigner": "جونیور UI/UX ډیزاینر",
+
+    "frontendInternDescription": "د هغو زده کوونکو لپاره مناسب انټرنشیپ چې React او Next.js پېژني.",
+    "womenScholarshipDescription": "د هغو ښځو لپاره د بورس فرصت چې غواړي آنلاین د ټکنالوژۍ زده کړه وکړي.",
+    "juniorDesignerDescription": "زموږ له ټیم سره یوځای شئ او د جونیور UI/UX ډیزاینر په توګه په عصري ویب پروژو کار وکړئ.",
+
+    "frontendInternShort": "د Frontend انټرنشیپ فرصت.",
+    "womenScholarshipShort": "د ښځو لپاره بورس.",
+
+    "basicReact": "د React بنسټیزه پوهه",
+    "htmlCss": "HTML او CSS",
+    "github": "GitHub",
+
+    "basicEnglish": "بنسټیزه انګلیسي",
+    "motivationLetter": "د انګیزې لیک",
+    "internetAccess": "انټرنېټ ته لاسرسی",
+
+    "figma": "Figma",
+    "adobeXd": "Adobe XD",
+    "basicHtmlCss": "د HTML/CSS بنسټیزه پوهه",
+
+    "react": "React",
+    "html": "HTML",
+    "css": "CSS",
+
+    "english": "انګلیسي",
+
+    "job": "دنده",
+    "internship": "انټرنشیپ",
+    "scholarship": "بورس",
+
+    "kabul": "کابل",
+    "herat": "هرات",
+    "online": "آنلاین",
+
+    "remote": "لرې کار",
+    "onsite": "حضوري"
   }
 }

@@ -181,5 +181,50 @@
     "remote": "دورکاری",
     "courses": "دوره‌های آموزشی",
     "volunteer": "داوطلبانه"
+  },
+  "Featured": {
+    "title": "فرصت‌های ویژه",
+    "description": "جدیدترین فرصت‌های انتخاب‌شده را مشاهده کنید."
+  },
+  "OpportunityData": {
+    "frontendIntern": "کارآموز توسعه‌دهنده فرانت‌اند",
+    "womenScholarship": "بورسیه زنان در تکنولوژی",
+    "juniorDesigner": "طراح جونیور UI/UX",
+
+    "frontendInternDescription": "یک فرصت کارآموزی مناسب برای دانشجویانی که با React و Next.js آشنایی دارند.",
+    "womenScholarshipDescription": "یک فرصت بورسیه برای بانوانی که می‌خواهند به‌صورت آنلاین در رشته تکنولوژی تحصیل کنند.",
+    "juniorDesignerDescription": "به تیم خلاق ما بپیوندید و به عنوان طراح جونیور UI/UX روی برنامه‌های مدرن وب کار کنید.",
+
+    "frontendInternShort": "فرصت کارآموزی فرانت‌اند.",
+    "womenScholarshipShort": "بورسیه ویژه بانوان.",
+
+    "basicReact": "آشنایی مقدماتی با React",
+    "htmlCss": "HTML و CSS",
+    "github": "گیت‌هاب",
+
+    "basicEnglish": "انگلیسی مقدماتی",
+    "motivationLetter": "نامه انگیزه",
+    "internetAccess": "دسترسی به اینترنت",
+
+    "figma": "فیگما",
+    "adobeXd": "Adobe XD",
+    "basicHtmlCss": "آشنایی مقدماتی با HTML/CSS",
+
+    "react": "React",
+    "html": "HTML",
+    "css": "CSS",
+
+    "english": "زبان انگلیسی",
+
+    "job": "وظیفه",
+    "internship": "کارآموزی",
+    "scholarship": "بورسیه",
+
+    "kabul": "کابل",
+    "herat": "هرات",
+    "online": "آنلاین",
+
+    "remote": "دورکاری",
+    "onsite": "حضوری"
   }
 }

@@ -182,5 +182,50 @@
     "remote": "Remote Work",
     "courses": "Courses",
     "volunteer": "Volunteer"
+  },
+  "Featured": {
+    "title": "Featured Opportunities",
+    "description": "Explore the latest opportunities selected for you."
+  },
+  "OpportunityData": {
+    "frontendIntern": "Frontend Developer Intern",
+    "womenScholarship": "Women in Tech Scholarship",
+    "juniorDesigner": "Junior UI/UX Designer",
+
+    "frontendInternDescription": "A beginner-friendly internship for students who know React and Next.js.",
+    "womenScholarshipDescription": "A scholarship opportunity for women who want to study technology online.",
+    "juniorDesignerDescription": "Join our creative team as a Junior UI/UX Designer and work on modern web applications.",
+
+    "frontendInternShort": "Frontend internship opportunity.",
+    "womenScholarshipShort": "Scholarship for women.",
+
+    "basicReact": "Basic React",
+    "htmlCss": "HTML/CSS",
+    "github": "GitHub",
+
+    "basicEnglish": "Basic English",
+    "motivationLetter": "Motivation Letter",
+    "internetAccess": "Internet Access",
+
+    "figma": "Figma",
+    "adobeXd": "Adobe XD",
+    "basicHtmlCss": "Basic HTML/CSS",
+
+    "react": "React",
+    "html": "HTML",
+    "css": "CSS",
+
+    "english": "English",
+
+    "job": "Job",
+    "internship": "Internship",
+    "scholarship": "Scholarship",
+
+    "kabul": "Kabul",
+    "herat": "Herat",
+    "online": "Online",
+
+    "remote": "Remote",
+    "onsite": "On-site"
   }
 }
