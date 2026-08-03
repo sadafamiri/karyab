@@ -162,5 +162,25 @@
   },
   "CategoryCard": {
     "opportunities": "فرصتونه"
+  },
+  "OpportunityDetails": {
+    "notFound": "فرصت ونه موندل شو",
+    "back": "بیرته",
+    "location": "ځای",
+    "type": "ډول",
+    "deadline": "وروستۍ نېټه",
+    "description": "تشریح",
+    "requirements": "شرایط",
+    "apply": "اوس غوښتنه وکړئ"
+  },
+  "Categories": {
+    "title": "د کټګورۍ له مخې لټون",
+    "description": "فرصتونه د خپلې علاقې له مخې ومومئ.",
+    "jobs": "دندې",
+    "internships": "انټرنشیپونه",
+    "scholarships": "بورسونه",
+    "remote": "لرې کار",
+    "courses": "روزنیز کورسونه",
+    "volunteer": "رضاکارانه"
   }
 }

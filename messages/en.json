@@ -162,5 +162,25 @@
   },
   "CategoryCard": {
     "opportunities": "Opportunities"
+  },
+  "OpportunityDetails": {
+    "notFound": "Opportunity Not Found",
+    "back": "Back",
+    "location": "Location",
+    "type": "Type",
+    "deadline": "Deadline",
+    "description": "Description",
+    "requirements": "Requirements",
+    "apply": "Apply Now"
+  },
+  "Categories": {
+    "title": "Browse by Category",
+    "description": "Explore opportunities based on your interests.",
+    "jobs": "Jobs",
+    "internships": "Internships",
+    "scholarships": "Scholarships",
+    "remote": "Remote Work",
+    "courses": "Courses",
+    "volunteer": "Volunteer"
   }
 }

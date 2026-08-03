@@ -161,5 +161,25 @@
   },
   "CategoryCard": {
     "opportunities": "فرصت"
+  },
+  "OpportunityDetails": {
+    "notFound": "فرصت مورد نظر پیدا نشد",
+    "back": "بازگشت",
+    "location": "موقعیت",
+    "type": "نوع",
+    "deadline": "مهلت",
+    "description": "توضیحات",
+    "requirements": "شرایط و الزامات",
+    "apply": "همین حالا درخواست دهید"
+  },
+  "Categories": {
+    "title": "مرور بر اساس دسته‌بندی",
+    "description": "فرصت‌ها را بر اساس علاقه خود پیدا کنید.",
+    "jobs": "وظایف",
+    "internships": "کارآموزی",
+    "scholarships": "بورسیه",
+    "remote": "دورکاری",
+    "courses": "دوره‌های آموزشی",
+    "volunteer": "داوطلبانه"
   }
 }

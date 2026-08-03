@@ -1,37 +1,37 @@
 export const categories = [
   {
     id: 1,
-    title: "Jobs",
+    key: "jobs",
     icon: "💼",
     total: 120,
   },
   {
     id: 2,
-    title: "Internships",
+    key: "internships",
     icon: "👨‍💻",
     total: 80,
   },
   {
     id: 3,
-    title: "Scholarships",
+    key: "scholarships",
     icon: "🎓",
     total: 55,
   },
   {
     id: 4,
-    title: "Remote Work",
+    key: "remote",
     icon: "🌍",
     total: 95,
   },
   {
     id: 5,
-    title: "Courses",
+    key: "courses",
     icon: "📚",
     total: 60,
   },
   {
     id: 6,
-    title: "Volunteer",
+    key: "volunteer",
     icon: "🤝",
     total: 30,
   },
