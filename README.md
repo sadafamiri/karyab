@@ -215,9 +215,9 @@ https://kaaryab-aghanistan.vercel.app/
 
 # GitHub Repository
 
-https://github.com/your-username/karyab-afghanistan
+https://github.com/sadafamiri/karyab
 
----
+
 
 # Future Improvements
 
