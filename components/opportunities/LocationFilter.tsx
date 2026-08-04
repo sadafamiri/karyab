@@ -14,10 +14,10 @@ export default function LocationFilter({
   const t = useTranslations("LocationFilter");
 
   const locations = [
-    { value: "All", label: t("all") },
-    { value: "Kabul", label: t("kabul") },
-    { value: "Herat", label: t("herat") },
-    { value: "Online", label: t("online") },
+    { value: "all", label: t("all") },
+    { value: "kabul", label: t("kabul") },
+    { value: "herat", label: t("herat") },
+    { value: "online", label: t("online") },
   ];
 
   return (

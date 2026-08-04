@@ -15,7 +15,7 @@ export default function OpportunitiesPage() {
 
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-  const [location, setLocation] = useState("All");
+  const [location, setLocation] = useState("all");
 
   const { opportunities } = useOpportunities();
 
@@ -41,7 +41,7 @@ export default function OpportunitiesPage() {
                 category === "All" || opportunity.category === category;
 
               const matchesLocation =
-                location === "All" || opportunity.location === location;
+                location === "all" || opportunity.location === location;
 
               return matchesSearch && matchesCategory && matchesLocation;
             })

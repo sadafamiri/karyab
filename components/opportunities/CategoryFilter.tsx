@@ -14,11 +14,10 @@ export default function CategoryFilter({
   const t = useTranslations("CategoryFilter");
 
   const categories = [
-    { value: "All", label: t("all") },
-    { value: "Job", label: t("job") },
-    { value: "Internship", label: t("internship") },
-    { value: "Scholarship", label: t("scholarship") },
-    { value: "Online Course", label: t("onlineCourse") },
+    { value: "all", label: t("all") },
+    { value: "job", label: t("job") },
+    { value: "internship", label: t("internship") },
+    { value: "scholarship", label: t("scholarship") },
   ];
 
   return (
