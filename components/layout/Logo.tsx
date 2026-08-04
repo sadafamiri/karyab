@@ -1,4 +1,4 @@
- //  درست شد 
+//  درست شد
 import Link from "next/link";
 
 export default function Logo() {

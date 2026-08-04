@@ -26,13 +26,15 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <Providers>
-        <Navbar />
+      <div dir={locale === "fa" || locale === "ps" ? "rtl" : "ltr"}>
+        <Providers>
+          <Navbar />
 
-        {children}
+          <main>{children}</main>
 
-        <Footer />
-      </Providers>
+          <Footer />
+        </Providers>
+      </div>
     </NextIntlClientProvider>
   );
 }
