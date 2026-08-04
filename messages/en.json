@@ -227,5 +227,49 @@
 
     "remote": "Remote",
     "onsite": "On-site"
-  }
+  },
+  "backendDeveloper": "Backend Developer",
+  "backendDeveloperDescription": "Backend developer position for building scalable web applications.",
+
+  "dataAnalyst": "Data Analyst",
+  "dataAnalystDescription": "Analyze project data and create insightful reports.",
+
+  "graphicDesignInternship": "Graphic Design Internship",
+  "graphicDesignDescription": "Internship opportunity for creative graphic designers.",
+
+  "pythonBootcamp": "Python Bootcamp",
+  "pythonBootcampDescription": "Python programming training for beginners.",
+
+  "volunteerTeacher": "Volunteer Teacher",
+  "volunteerTeacherDescription": "Volunteer opportunity to teach English to students.",
+
+  "reactDeveloper": "React Developer",
+  "reactDeveloperDescription": "Develop modern web applications using React and Next.js.",
+
+  "digitalMarketingSpecialist": "Digital Marketing Specialist",
+  "digitalMarketingDescription": "Manage SEO, social media, and online marketing campaigns.",
+
+  "machineLearningInternship": "Machine Learning Internship",
+  "machineLearningDescription": "Internship for students interested in Artificial Intelligence and Machine Learning.",
+
+  "germanyScholarship": "Scholarship in Germany",
+  "germanyScholarshipDescription": "Study abroad scholarship opportunity in Germany.",
+
+  "nodeJs": "Node.js",
+  "express": "Express.js",
+  "mongoDb": "MongoDB",
+  "excel": "Excel",
+  "sql": "SQL",
+  "powerBi": "Power BI",
+  "illustrator": "Adobe Illustrator",
+  "photoshop": "Adobe Photoshop",
+  "basicComputerSkills": "Basic Computer Skills",
+  "react": "React",
+  "nextJs": "Next.js",
+  "seo": "SEO",
+  "socialMedia": "Social Media Marketing",
+  "python": "Python",
+  "numpy": "NumPy",
+  "ielts": "IELTS Certificate",
+  "bachelorDegree": "Bachelor Degree"
 }

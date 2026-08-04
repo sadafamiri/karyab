@@ -1,197 +1,225 @@
 export const opportunities = [
   {
     id: "1",
-    title: "Frontend Developer Intern",
+    title: "frontendIntern",
     organization: "Kabul Tech Community",
-    category: "Internship",
-    location: "Kabul",
-    type: "Remote",
+    category: "internship",
+    location: "kabul",
+    type: "remote",
     deadline: "2026-07-20",
 
-    description:
-      "A beginner-friendly internship for students who know React and Next.js.",
+    description: "frontendInternDescription",
 
-    requirements: ["Basic React", "HTML/CSS", "GitHub"],
+    requirements: ["basicReact", "htmlCss", "github"],
 
     applyLink: "https://example.com/apply",
   },
 
   {
     id: "2",
-    title: "Women in Tech Scholarship",
+    title: "womenScholarship",
     organization: "Global Learning Foundation",
-    category: "Scholarship",
-    location: "Online",
-    type: "Remote",
+    category: "scholarship",
+    location: "online",
+    type: "remote",
     deadline: "2026-08-10",
 
-    description:
-      "A scholarship opportunity for women who want to study technology online.",
+    description: "womenScholarshipDescription",
 
-    requirements: ["Basic English", "Motivation Letter", "Internet Access"],
+    requirements: ["basicEnglish", "motivationLetter", "internetAccess"],
 
     applyLink: "https://example.com/scholarship",
   },
 
   {
     id: "3",
-    title: "Junior UI/UX Designer",
+    title: "juniorDesigner",
     organization: "Herat Digital Hub",
-    category: "Job",
-    location: "Herat",
-    type: "On-site",
+    category: "job",
+    location: "herat",
+    type: "onsite",
     deadline: "2026-07-30",
 
-    description:
-      "Join our creative team as a Junior UI/UX Designer and work on modern web applications.",
+    description: "juniorDesignerDescription",
 
-    requirements: ["Figma", "Adobe XD", "Basic HTML/CSS"],
+    requirements: ["figma", "adobeXd", "basicHtmlCss"],
 
     applyLink: "https://example.com/job",
   },
 
   {
     id: "4",
-    title: "Frontend Developer Intern",
+    title: "frontendIntern",
     organization: "Kabul Tech Community",
-    category: "Internship",
-    location: "Kabul",
-    type: "Remote",
+    category: "internship",
+    location: "kabul",
+    type: "remote",
     deadline: "2026-07-20",
-    description: "Frontend internship opportunity.",
-    requirements: ["React", "HTML", "CSS"],
+
+    description: "frontendInternShort",
+
+    requirements: ["react", "html", "css"],
+
     applyLink: "https://example.com/1",
   },
+
   {
     id: "5",
-    title: "Women in Tech Scholarship",
+    title: "womenScholarship",
     organization: "Global Learning Foundation",
-    category: "Scholarship",
-    location: "Online",
-    type: "Remote",
+    category: "scholarship",
+    location: "online",
+    type: "remote",
     deadline: "2026-08-10",
-    description: "Scholarship for women.",
-    requirements: ["English", "Motivation Letter"],
+
+    description: "womenScholarshipShort",
+
+    requirements: ["english", "motivationLetter"],
+
     applyLink: "https://example.com/2",
   },
-  {
-    id: "6",
-    title: "Junior UI/UX Designer",
-    organization: "Herat Digital Hub",
-    category: "Job",
-    location: "Herat",
-    type: "On-site",
-    deadline: "2026-07-30",
-    description: "Junior designer position.",
-    requirements: ["Figma", "Adobe XD"],
-    applyLink: "https://example.com/3",
-  },
+
   {
     id: "7",
-    title: "Backend Developer",
+    title: "backendDeveloper",
     organization: "Afghan Tech",
-    category: "Job",
-    location: "Kabul",
-    type: "Hybrid",
+    category: "job",
+    location: "kabul",
+    type: "hybrid",
     deadline: "2026-08-15",
-    description: "Backend Developer Position.",
-    requirements: ["Node.js", "Express", "MongoDB"],
+
+    description: "backendDeveloperDescription",
+
+    requirements: ["nodeJs", "express", "mongoDb"],
+
     applyLink: "https://example.com/4",
   },
+
   {
     id: "8",
-    title: "Data Analyst",
+    title: "dataAnalyst",
     organization: "UNDP Afghanistan",
-    category: "Job",
-    location: "Herat",
-    type: "On-site",
+    category: "job",
+    location: "herat",
+    type: "onsite",
     deadline: "2026-08-25",
-    description: "Analyze project data.",
-    requirements: ["Excel", "SQL", "Power BI"],
+
+    description: "dataAnalystDescription",
+
+    requirements: ["excel", "sql", "powerBi"],
+
     applyLink: "https://example.com/5",
   },
+
   {
     id: "9",
-    title: "Graphic Design Internship",
+    title: "graphicDesignInternship",
     organization: "Creative Studio",
-    category: "Internship",
-    location: "Kabul",
-    type: "Hybrid",
+    category: "internship",
+    location: "kabul",
+    type: "hybrid",
     deadline: "2026-09-01",
-    description: "Internship for Graphic Designers.",
-    requirements: ["Illustrator", "Photoshop"],
+
+    description: "graphicDesignDescription",
+
+    requirements: ["illustrator", "photoshop"],
+
     applyLink: "https://example.com/6",
   },
+
   {
     id: "10",
-    title: "Python Bootcamp",
+    title: "pythonBootcamp",
     organization: "Code Academy",
-    category: "Training",
-    location: "Online",
-    type: "Remote",
+    category: "training",
+    location: "online",
+    type: "remote",
     deadline: "2026-09-10",
-    description: "Python training course.",
-    requirements: ["Basic Computer Skills"],
+
+    description: "pythonBootcampDescription",
+
+    requirements: ["basicComputerSkills"],
+
     applyLink: "https://example.com/7",
   },
+
   {
     id: "11",
-    title: "Volunteer Teacher",
+    title: "volunteerTeacher",
     organization: "Education For All",
-    category: "Volunteer",
-    location: "Herat",
-    type: "On-site",
+    category: "volunteer",
+    location: "herat",
+    type: "onsite",
     deadline: "2026-08-12",
-    description: "Volunteer English teacher.",
-    requirements: ["English"],
+
+    description: "volunteerTeacherDescription",
+
+    requirements: ["english"],
+
     applyLink: "https://example.com/8",
   },
+
   {
     id: "12",
-    title: "React Developer",
+    title: "reactDeveloper",
     organization: "Tech Vision",
-    category: "Job",
-    location: "Mazar",
-    type: "Remote",
+    category: "job",
+    location: "mazar",
+    type: "remote",
     deadline: "2026-09-18",
-    description: "React Developer Position.",
-    requirements: ["React", "Next.js"],
+
+    description: "reactDeveloperDescription",
+
+    requirements: ["react", "nextJs"],
+
     applyLink: "https://example.com/9",
   },
+
   {
     id: "13",
-    title: "Digital Marketing Specialist",
+    title: "digitalMarketingSpecialist",
     organization: "Smart Media",
-    category: "Job",
-    location: "Kabul",
-    type: "Hybrid",
+    category: "job",
+    location: "kabul",
+    type: "hybrid",
     deadline: "2026-09-25",
-    description: "Marketing Specialist.",
-    requirements: ["SEO", "Social Media"],
+
+    description: "digitalMarketingDescription",
+
+    requirements: ["seo", "socialMedia"],
+
     applyLink: "https://example.com/10",
   },
+
   {
     id: "14",
-    title: "Machine Learning Internship",
+    title: "machineLearningInternship",
     organization: "AI Lab",
-    category: "Internship",
-    location: "Online",
-    type: "Remote",
+    category: "internship",
+    location: "online",
+    type: "remote",
     deadline: "2026-10-02",
-    description: "ML Internship.",
-    requirements: ["Python", "NumPy"],
+
+    description: "machineLearningDescription",
+
+    requirements: ["python", "numpy"],
+
     applyLink: "https://example.com/11",
   },
+
   {
     id: "15",
-    title: "Scholarship in Germany",
+    title: "germanyScholarship",
     organization: "DAAD",
-    category: "Scholarship",
-    location: "Germany",
-    type: "Scholarship",
+    category: "scholarship",
+    location: "germany",
+    type: "scholarship",
     deadline: "2026-10-10",
-    description: "Study Abroad.",
-    requirements: ["IELTS", "Bachelor Degree"],
+
+    description: "germanyScholarshipDescription",
+
+    requirements: ["ielts", "bachelorDegree"],
+
     applyLink: "https://example.com/12",
   },
 ];

@@ -227,5 +227,49 @@
 
     "remote": "لرې کار",
     "onsite": "حضوري"
-  }
+  },
+  "backendDeveloper": "بک‌اند پراختیاکوونکی",
+  "backendDeveloperDescription": "د پراخېدونکو ویب اپلېکېشنونو د جوړولو لپاره دندې فرصت.",
+
+  "dataAnalyst": "د معلوماتو شنونکی",
+  "dataAnalystDescription": "د پروژې معلومات تحلیل او راپورونه جوړول.",
+
+  "graphicDesignInternship": "د ګرافیک ډیزاین انټرنشیپ",
+  "graphicDesignDescription": "د تخلیقي ګرافیک ډیزاینرانو لپاره د انټرنشیپ فرصت.",
+
+  "pythonBootcamp": "د پایتون بوټ‌کمپ",
+  "pythonBootcampDescription": "د پیل کوونکو لپاره د پایتون روزنیز کورس.",
+
+  "volunteerTeacher": "رضاکار ښوونکی",
+  "volunteerTeacherDescription": "د انګلیسي ژبې د تدریس رضاکارانه فرصت.",
+
+  "reactDeveloper": "React پراختیاکوونکی",
+  "reactDeveloperDescription": "د React او Next.js په مرسته د عصري ویب اپلېکېشنونو جوړول.",
+
+  "digitalMarketingSpecialist": "د ډیجیټل بازارموندنې متخصص",
+  "digitalMarketingDescription": "د SEO، ټولنیزو رسنیو او آنلاین کمپاینونو مدیریت.",
+
+  "machineLearningInternship": "د ماشین زده کړې انټرنشیپ",
+  "machineLearningDescription": "د مصنوعي ځیرکتیا او ماشین زده کړې زده کوونکو لپاره انټرنشیپ.",
+
+  "germanyScholarship": "د آلمان بورس",
+  "germanyScholarshipDescription": "په آلمان کې د زده کړو بورس.",
+
+  "nodeJs": "Node.js",
+  "express": "Express.js",
+  "mongoDb": "MongoDB",
+  "excel": "Excel",
+  "sql": "SQL",
+  "powerBi": "Power BI",
+  "illustrator": "Adobe Illustrator",
+  "photoshop": "Adobe Photoshop",
+  "basicComputerSkills": "د کمپیوټر بنسټیز مهارتونه",
+  "react": "React",
+  "nextJs": "Next.js",
+  "seo": "SEO",
+  "socialMedia": "ټولنیزې رسنۍ",
+  "python": "Python",
+  "numpy": "NumPy",
+  "ielts": "IELTS سند",
+  "bachelorDegree": "د لیسانس سند"
 }

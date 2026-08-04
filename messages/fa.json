@@ -226,5 +226,49 @@
 
     "remote": "دورکاری",
     "onsite": "حضوری"
-  }
+  },
+  "backendDeveloper": "توسعه‌دهنده بک‌اند",
+  "backendDeveloperDescription": "فرصت شغلی برای توسعه برنامه‌های تحت وب مقیاس‌پذیر.",
+
+  "dataAnalyst": "تحلیلگر داده",
+  "dataAnalystDescription": "تحلیل داده‌های پروژه و تهیه گزارش‌های کاربردی.",
+
+  "graphicDesignInternship": "کارآموز طراحی گرافیک",
+  "graphicDesignDescription": "فرصت کارآموزی برای طراحان خلاق گرافیک.",
+
+  "pythonBootcamp": "بوت‌کمپ پایتون",
+  "pythonBootcampDescription": "دوره آموزشی برنامه‌نویسی پایتون برای مبتدیان.",
+
+  "volunteerTeacher": "معلم داوطلب",
+  "volunteerTeacherDescription": "فرصت داوطلبانه برای تدریس زبان انگلیسی.",
+
+  "reactDeveloper": "توسعه‌دهنده React",
+  "reactDeveloperDescription": "توسعه برنامه‌های مدرن وب با React و Next.js.",
+
+  "digitalMarketingSpecialist": "متخصص بازاریابی دیجیتال",
+  "digitalMarketingDescription": "مدیریت سئو، شبکه‌های اجتماعی و کمپین‌های بازاریابی آنلاین.",
+
+  "machineLearningInternship": "کارآموز یادگیری ماشین",
+  "machineLearningDescription": "کارآموزی برای علاقه‌مندان به هوش مصنوعی و یادگیری ماشین.",
+
+  "germanyScholarship": "بورسیه تحصیلی آلمان",
+  "germanyScholarshipDescription": "فرصت بورسیه تحصیل در آلمان.",
+
+  "nodeJs": "Node.js",
+  "express": "Express.js",
+  "mongoDb": "MongoDB",
+  "excel": "اکسل",
+  "sql": "SQL",
+  "powerBi": "Power BI",
+  "illustrator": "Adobe Illustrator",
+  "photoshop": "Adobe Photoshop",
+  "basicComputerSkills": "مهارت‌های ابتدایی کامپیوتر",
+  "react": "React",
+  "nextJs": "Next.js",
+  "seo": "سئو",
+  "socialMedia": "بازاریابی شبکه‌های اجتماعی",
+  "python": "پایتون",
+  "numpy": "NumPy",
+  "ielts": "مدرک آیلتس",
+  "bachelorDegree": "مدرک لیسانس"
 }
