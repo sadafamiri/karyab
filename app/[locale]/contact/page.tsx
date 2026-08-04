@@ -17,7 +17,6 @@ export default function ContactPage() {
           </p>
 
           <form className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 dark:border-slate-700 dark:bg-slate-800">
-            {/* Full Name */}
             <div>
               <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
                 {t("fullName")}
@@ -30,7 +29,6 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Email */}
             <div>
               <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
                 {t("email")}
@@ -43,7 +41,6 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Subject */}
             <div>
               <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
                 {t("subject")}
@@ -56,7 +53,6 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Message */}
             <div>
               <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
                 {t("message")}

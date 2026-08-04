@@ -1,4 +1,3 @@
-//  درست شد
 import Container from "./Container";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -8,7 +7,6 @@ export default function Footer() {
     <footer className="mt-20 border-t border-slate-200 bg-slate-50 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900">
       <Container>
         <div className="grid gap-10 py-12 md:grid-cols-3">
-          {/* Logo & Description */}
           <div>
             <Logo />
 
@@ -19,7 +17,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
               Quick Links
@@ -64,7 +61,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
               Contact

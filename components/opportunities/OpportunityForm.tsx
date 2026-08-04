@@ -98,7 +98,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
       className="space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow transition-colors duration-300 dark:border-slate-700 dark:bg-slate-800"
     >
       {" "}
-      {/* Title */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("title")}
@@ -114,7 +113,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           <p className="mt-1 text-sm text-red-600">{errors.title.message}</p>
         )}
       </div>
-      {/* Organization */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("organization")}
@@ -132,7 +130,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-      {/* Category */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("category")}
@@ -159,7 +156,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           <p className="mt-1 text-sm text-red-600">{errors.category.message}</p>
         )}
       </div>
-      {/* Location */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("location")}
@@ -175,7 +171,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           <p className="mt-1 text-sm text-red-600">{errors.location.message}</p>
         )}
       </div>
-      {/* Deadline */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("deadline")}
@@ -191,7 +186,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           <p className="mt-1 text-sm text-red-600">{errors.deadline.message}</p>
         )}
       </div>
-      {/* Description */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("description")}
@@ -209,7 +203,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-      {/* Requirements */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("requirements")}
@@ -228,7 +221,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-      {/* Apply Link */}
       <div>
         <label className="mb-2 block font-semibold text-slate-900 dark:text-white">
           {t("applyLink")}
@@ -246,7 +238,6 @@ export default function OpportunityForm({ opportunity }: OpportunityFormProps) {
           </p>
         )}
       </div>
-      {/* Submit Button */}
       <button
         type="submit"
         className="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"

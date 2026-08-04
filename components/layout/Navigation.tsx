@@ -6,39 +6,42 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useAuth } from "@/context/AuthContext";
-import { useLocale } from "next-intl";
-
-const links = [
-  {
-    name: "Home",
-    href: "",
-  },
-  {
-    name: "Opportunities",
-    href: "/opportunities",
-  },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   const { user, logout } = useAuth();
+
   const locale = useLocale();
+  const t = useTranslations("Navbar");
+
+  const links = [
+    {
+      name: t("home"),
+      href: "",
+    },
+    {
+      name: t("opportunities"),
+      href: "/opportunities",
+    },
+    {
+      name: t("about"),
+      href: "/about",
+    },
+    {
+      name: t("contact"),
+      href: "/contact",
+    },
+  ];
 
   return (
     <nav className="relative">
+      {/* Desktop */}
       <div className="hidden md:flex items-center gap-8">
         {links.map((link) => (
           <Link
-            key={link.name}
+            key={link.href}
             href={`/${locale}${link.href}`}
             className="text-sm font-medium text-slate-700 transition hover:text-blue-600 dark:text-white"
           >
@@ -47,6 +50,7 @@ export default function Navigation() {
         ))}
       </div>
 
+      {/* Mobile Button */}
       <button
         onClick={() => setOpen(!open)}
         className="flex flex-col gap-1.5 p-2 md:hidden"
@@ -56,12 +60,13 @@ export default function Navigation() {
         <span className="h-0.5 w-6 bg-slate-700 dark:bg-white"></span>
       </button>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="absolute right-0 top-14 z-50 w-72 rounded-xl border border-slate-200 bg-white p-5 shadow-2xl dark:border-slate-700 dark:bg-slate-900 md:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
-                key={link.name}
+                key={link.href}
                 href={`/${locale}${link.href}`}
                 onClick={() => setOpen(false)}
                 className="text-sm font-medium text-slate-700 transition hover:text-blue-600 dark:text-white"
@@ -85,7 +90,7 @@ export default function Navigation() {
                   onClick={() => setOpen(false)}
                   className="rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-700"
                 >
-                  Add Opportunity
+                  {t("addOpportunity")}
                 </Link>
 
                 <Link
@@ -93,7 +98,7 @@ export default function Navigation() {
                   onClick={() => setOpen(false)}
                   className="text-sm font-medium text-slate-700 dark:text-white"
                 >
-                  {user.name}
+                  {t("hello")}, {user.name}
                 </Link>
 
                 <button
@@ -103,7 +108,7 @@ export default function Navigation() {
                   }}
                   className="rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700"
                 >
-                  Logout
+                  {t("logout")}
                 </button>
               </>
             ) : (
@@ -113,7 +118,7 @@ export default function Navigation() {
                   onClick={() => setOpen(false)}
                   className="rounded-lg border border-slate-300 px-4 py-2 text-center dark:border-slate-700"
                 >
-                  Sign In
+                  {t("signin")}
                 </Link>
 
                 <Link
@@ -121,7 +126,7 @@ export default function Navigation() {
                   onClick={() => setOpen(false)}
                   className="rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-700"
                 >
-                  Sign Up
+                  {t("signup")}
                 </Link>
               </>
             )}
